@@ -21,12 +21,35 @@ const dateBuilder = (d) => {
 export default function App() {
   return (
     <View style={styles.main}>
-      <View style='search-box'>
-      <TextInput style={styles.input} placeholder='Enter the name of the city'/>
-      <Button style={styles.btn} title="Search"/>
-
-     
+      <View style='searchBox'>
+      <TextInput style={styles.searchBar} placeholder='Enter the name of the city'/>
       </View>
+        <View>
+          <View style={styles.locationBox}>
+            <View style={styles.location}>
+              <Text>
+                </Text>
+                </View>
+            <View style={styles.date}>
+              <Text>
+                Text
+                </Text>
+                </View>
+          </View>
+          <View style={styles.weatherBox}>
+            <View style={styles.temp}>
+              <Text>
+              Text
+              </Text>
+            </View>
+            <View style={styles.weather}>
+            <Text>
+              Text
+              </Text>
+              </View>
+          </View>
+        </View>
+     
     </View>
   );
 }
@@ -38,16 +61,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  input: {
+  searchBar: {
     width: '70%',
     height: 30,
     textAlign: 'center',
     borderBottomColor: 'gray',
     borderBottomWidth: 2,        
 },
-btn: {
-  backgroundColor: '#fff',
-  alignItems: 'center',
-  justifyContent: 'center',
-}
+
 });
