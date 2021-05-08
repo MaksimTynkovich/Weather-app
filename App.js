@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 const api = {
   key: "378301404f7c6399119faa561e6e9c89",
@@ -21,18 +20,34 @@ const dateBuilder = (d) => {
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app</Text>
-      <StatusBar style="auto" />
+    <View style={styles.main}>
+      <View style='search-box'>
+      <TextInput style={styles.input} placeholder='Enter the name of the city'/>
+      <Button style={styles.btn} title="Search"/>
+
+     
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  main: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  input: {
+    width: '70%',
+    height: 30,
+    textAlign: 'center',
+    borderBottomColor: 'gray',
+    borderBottomWidth: 2,        
+},
+btn: {
+  backgroundColor: '#fff',
+  alignItems: 'center',
+  justifyContent: 'center',
+}
 });
