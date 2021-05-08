@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 const api = {
@@ -19,6 +19,11 @@ const dateBuilder = (d) => {
 }
 
 export default function App() {
+
+  const [query, setQuery] = useState('');
+  const [weather, setWeather] = useState({});
+
+
   return (
     <View style={styles.main}>
       <View style='searchBox'>
